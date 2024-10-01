@@ -1,6 +1,6 @@
 # usermodel
 
-Given a task, return the user-configured LLM model by executing `llm-manager`, or else return the string in the `DefaultModel` variable (currently `gemma2:2b`).
+Given a task, return the user-configured LLM model by executing [`llm-manager`](https://github.com/xyproto/llm-manager), or else return the string in the `DefaultModel` variable (currently `gemma2:2b`).
 
 ### Example use
 
