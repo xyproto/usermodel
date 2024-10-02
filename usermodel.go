@@ -34,7 +34,7 @@ func GetTestModel() string           { return Get(TestTask) }
 func GetTextGenerationModel() string { return Get(TextGenerationTask) }
 func GetToolUseModel() string        { return Get(ToolUseTask) }
 func GetTranslationModel() string    { return Get(TranslationTask) }
-func GetvisionModel() string         { return Get(VisionTask) }
+func GetVisionModel() string         { return Get(VisionTask) }
 
 // Get attempts to retrieve the model name using llm-manager.
 // If llm-manager is not available or the command fails, it falls back to the DefaultModel variable.
