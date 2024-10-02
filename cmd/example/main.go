@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	fmt.Println(usermodel.GetCodeCompletionModel())
+	fmt.Println(usermodel.GetVisionModel())
 }
