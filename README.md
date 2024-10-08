@@ -1,6 +1,10 @@
 # usermodel
 
-Given a task, return the user-configured LLM model by executing [`llm-manager`](https://github.com/xyproto/llm-manager), or else return a default model for the given task.
+Given a task string (like "code-completion"), return the user-configured LLM model for this task.
+
+The user-configured LLM model is found by executing [`llm-manager`](https://github.com/xyproto/llm-manager).
+
+If no user-configured model is available, return a default model.
 
 ### Example use
 
@@ -16,6 +20,24 @@ import (
 func main() {
     fmt.Println(usermodel.GetVisionModel())
 }
+```
+
+### Exported types
+
+```go
+type Task string
+```
+
+### Exported constants
+
+```go
+ChatTask           = "chat"
+CodeCompletionTask = "code-completion"
+TestTask           = "test"
+TextGenerationTask = "text-generation"
+ToolUseTask        = "tool-use"
+TranslationTask    = "translation"
+VisionTask         = "vision"
 ```
 
 ### Exported functions
