@@ -1,8 +1,8 @@
 # usermodel
 
-Given a task string (like "code-completion"), return the user-configured LLM model for this task.
+Given a task string (like `code-completion`), return the user-configured Ollama model for this task.
 
-The user-configured LLM model is found by executing [`llm-manager`](https://github.com/xyproto/llm-manager).
+The user-configured Ollama model is found by executing [`llm-manager`](https://github.com/xyproto/llm-manager).
 
 If no user-configured model is available, return a default model.
 
