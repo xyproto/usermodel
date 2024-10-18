@@ -32,6 +32,7 @@ type Task string
 
 ```go
 ChatTask           = "chat"
+CodeTask           = "code"
 CodeCompletionTask = "code-completion"
 TestTask           = "test"
 TextGenerationTask = "text-generation"
@@ -45,6 +46,7 @@ VisionTask         = "vision"
 ```go
 func AvailableTasks() []Task
 func GetChatModel() string
+func GetCodeModel() string
 func GetCodeCompletionModel() string
 func GetTestModel() string
 func GetTextGenerationModel() string
@@ -56,6 +58,6 @@ func Get(task Task) string
 
 ### General info
 
-* Version: 1.1.0
+* Version: 1.2.0
 * License: BSD-3
 * Author: Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;
