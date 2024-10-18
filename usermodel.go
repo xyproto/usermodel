@@ -15,6 +15,7 @@ const (
 
 	// Tasks
 	ChatTask           = "chat"
+	CodeTask           = "code"
 	CodeCompletionTask = "code-completion"
 	TestTask           = "test"
 	TextGenerationTask = "text-generation"
@@ -26,6 +27,7 @@ const (
 var (
 	DefaultModels = map[Task]string{
 		"chat":            "llama3.2:3b",
+		"code":            "deepseek-coder:1.3b",
 		"code-completion": "deepseek-coder:1.3b",
 		"test":            "tinyllama:1b",
 		"text-generation": "gemma2:2b",
@@ -36,6 +38,7 @@ var (
 )
 
 func GetChatModel() string           { return Get(ChatTask) }
+func GetCodeModel() string           { return Get(CodeTask) }
 func GetCodeCompletionModel() string { return Get(CodeCompletionTask) }
 func GetTestModel() string           { return Get(TestTask) }
 func GetTextGenerationModel() string { return Get(TextGenerationTask) }
@@ -44,7 +47,7 @@ func GetTranslationModel() string    { return Get(TranslationTask) }
 func GetVisionModel() string         { return Get(VisionTask) }
 
 func AvailableTasks() []Task {
-	return []Task{ChatTask, CodeCompletionTask, TestTask, TextGenerationTask, ToolUseTask, TranslationTask, VisionTask}
+	return []Task{ChatTask, CodeTask, CodeCompletionTask, TestTask, TextGenerationTask, ToolUseTask, TranslationTask, VisionTask}
 }
 
 func defaultModel(task Task) string {
