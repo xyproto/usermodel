@@ -2,7 +2,7 @@
 
 Given a task string (like `code-completion`), return the user-configured Ollama model for this task.
 
-The user-configured Ollama model is found by executing [`llm-manager`](https://github.com/xyproto/llm-manager).
+The user-configured Ollama model is found by examining `~/.config/llm-manager/llm.conf` and `/etc/llm.conf` and if that does not work out, by executing [`llm-manager`](https://github.com/xyproto/llm-manager).
 
 If no user-configured model is available, return a default model.
 
