@@ -6,5 +6,9 @@ import (
 )
 
 func TestGetCodeCompletionModel(t *testing.T) {
-	fmt.Println(GetCodeCompletionModel())
+	ccm := GetCodeCompletionModel()
+	if ccm == "" {
+		fmt.Println("Warning: the code completion model is empty. Is llm-manager installed?")
+	}
+	fmt.Printf("code completion model = %s\n", GetCodeCompletionModel())
 }
