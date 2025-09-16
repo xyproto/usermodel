@@ -93,7 +93,7 @@ func Get(task Task) string {
 			trimmedLine := strings.TrimSpace(line)
 			if strings.HasPrefix(trimmedLine, string(task)) && strings.Count(trimmedLine, "=") == 1 {
 				fields := strings.SplitN(trimmedLine, "=", 2)
-				value := strings.TrimSpace(fields[1])
+				value := strings.TrimSpace(strings.ReplaceAll(strings.TrimSpace(fields[1]), "#", ""))
 				if value != "" {
 					return value
 				}
